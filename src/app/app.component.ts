@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bwm-cli';
+  compenentTitle = "Hello app component"
+
+  clickHandler(){
+    alert("Clicked");
+  }
 }
