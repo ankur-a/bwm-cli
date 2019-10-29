@@ -8,7 +8,7 @@
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "bwm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -94,7 +94,9 @@
             ],
             "scripts": [],
             "stylePreprocessorOptions": {
-              "includePaths": []
+              "includePaths": [
+                "styles-paths"
+              ]
             }
           }
         },
@@ -124,6 +126,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "bwm-cli"
+    }
+  },
+  "defaultProject": "bwm-cli",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
