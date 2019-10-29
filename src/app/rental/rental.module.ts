@@ -6,6 +6,8 @@ import { CommonModule } from '@angular/common';
 import { RentalService } from './shared/rental.service';
 import { Routes, RouterModule } from '@angular/router';
 import { RentalDetailComponent } from './rental-detail/rental-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UpperCasePipe } from "../common/pipes/uppercase.pipes";
 
 const routes: Routes = [
     {path: 'rentals', component: RentalComponent,
@@ -21,11 +23,13 @@ const routes: Routes = [
         RentalComponent,
         RentalListComponent,
         RentalListItemComponent,
-        RentalDetailComponent
+        RentalDetailComponent,
+        UpperCasePipe
     ],
     imports: [
         CommonModule,
-        RouterModule.forChild(routes)
+        RouterModule.forChild(routes),
+        HttpClientModule,
     ],
     providers: [RentalService]
 })
